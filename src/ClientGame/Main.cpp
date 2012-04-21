@@ -1,7 +1,7 @@
 
 #include "stdafx.h"
 
-#include "game_manager.h"
+#include "scene_manager.h"
 
 int main(int argc, char* argv[]) {
 	// get things going
@@ -11,13 +11,12 @@ int main(int argc, char* argv[]) {
 	//		std::string windowName	default: "Angel Engine"
 	//		bool antiAliasing		default: false
 	//		bool fullScreen			default: false
-	theWorld.Initialize(1024, 768, "Pix Blit Runner", true, false);
+	theWorld.Initialize(1024, 768, "TinyColony", true, false);
 	
-	//adds the default grid so you can more easily place Actors
-	theWorld.Add(new GridActor(), -1);
-	
+    theWorld.Add(new GridActor(), 1);
+    
     // Set the game manager to handle sounds and scenes etc
-    theWorld.SetGameManager(&theGame);
+    theWorld.SetGameManager(&theSceneManager);
 
 	// do all your setup first, because this function won't return until you're exiting
 	theWorld.StartGame();
