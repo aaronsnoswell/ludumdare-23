@@ -10,3 +10,13 @@
 *.lai
 *.la
 *.a
+
+# Build directories
+src/build
+src/Published
+
+# Xcode .swp files
+*.swp
+
+# Omnicppcomplete tag files
+tags

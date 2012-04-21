@@ -526,6 +526,12 @@
 		34F03D9B14FB1FD6009A3EC4 /* b2WheelJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F03D8514FB1FD6009A3EC4 /* b2WheelJoint.h */; };
 		34F03D9F14FB2015009A3EC4 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34F03D9D14FB2015009A3EC4 /* b2Rope.cpp */; };
 		34F03DA014FB2015009A3EC4 /* b2Rope.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F03D9E14FB2015009A3EC4 /* b2Rope.h */; };
+		930F1DB91541CF9800E1D127 /* game_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 930F1DB31541CF9800E1D127 /* game_manager.cpp */; };
+		930F1DBA1541CF9800E1D127 /* game_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 930F1DB41541CF9800E1D127 /* game_manager.h */; };
+		930F1DBB1541CF9800E1D127 /* screen_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 930F1DB51541CF9800E1D127 /* screen_main.cpp */; };
+		930F1DBC1541CF9800E1D127 /* screen_main.h in Headers */ = {isa = PBXBuildFile; fileRef = 930F1DB61541CF9800E1D127 /* screen_main.h */; };
+		930F1DBD1541CF9800E1D127 /* screen_menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 930F1DB71541CF9800E1D127 /* screen_menu.cpp */; };
+		930F1DBE1541CF9800E1D127 /* screen_menu.h in Headers */ = {isa = PBXBuildFile; fileRef = 930F1DB81541CF9800E1D127 /* screen_menu.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1228,6 +1234,12 @@
 		34F1FF300E5D31DB0065CD22 /* angel.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = angel.i; path = Angel/Scripting/Interfaces/angel.i; sourceTree = "<group>"; };
 		34F1FFD80E5D3F910065CD22 /* world.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = world.i; path = Angel/Scripting/Interfaces/world.i; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ClientGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClientGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		930F1DB31541CF9800E1D127 /* game_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = game_manager.cpp; path = ClientGame/game_manager.cpp; sourceTree = "<group>"; };
+		930F1DB41541CF9800E1D127 /* game_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = game_manager.h; path = ClientGame/game_manager.h; sourceTree = "<group>"; };
+		930F1DB51541CF9800E1D127 /* screen_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = screen_main.cpp; path = ClientGame/screen_main.cpp; sourceTree = "<group>"; };
+		930F1DB61541CF9800E1D127 /* screen_main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = screen_main.h; path = ClientGame/screen_main.h; sourceTree = "<group>"; };
+		930F1DB71541CF9800E1D127 /* screen_menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = screen_menu.cpp; path = ClientGame/screen_menu.cpp; sourceTree = "<group>"; };
+		930F1DB81541CF9800E1D127 /* screen_menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = screen_menu.h; path = ClientGame/screen_menu.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1815,6 +1827,12 @@
 		34974A2B0E29259A0018A032 /* ClientGame */ = {
 			isa = PBXGroup;
 			children = (
+				930F1DB31541CF9800E1D127 /* game_manager.cpp */,
+				930F1DB41541CF9800E1D127 /* game_manager.h */,
+				930F1DB51541CF9800E1D127 /* screen_main.cpp */,
+				930F1DB61541CF9800E1D127 /* screen_main.h */,
+				930F1DB71541CF9800E1D127 /* screen_menu.cpp */,
+				930F1DB81541CF9800E1D127 /* screen_menu.h */,
 				347CFFE811DC23E100761E0E /* PCH */,
 				34713D900EA6D6F800AF58CA /* Config */,
 				34713D990EA6D71100AF58CA /* Resources */,
@@ -2473,6 +2491,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				34974A3B0E2926460018A032 /* stdafx.h in Headers */,
+				930F1DBA1541CF9800E1D127 /* game_manager.h in Headers */,
+				930F1DBC1541CF9800E1D127 /* screen_main.h in Headers */,
+				930F1DBE1541CF9800E1D127 /* screen_menu.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3303,6 +3324,9 @@
 				34388F2F11E3EF45002A79B1 /* AngelLuaWrapping.cpp in Sources */,
 				34974A330E2925BE0018A032 /* Main.cpp in Sources */,
 				34974A320E2925BE0018A032 /* stdafx.cpp in Sources */,
+				930F1DB91541CF9800E1D127 /* game_manager.cpp in Sources */,
+				930F1DBB1541CF9800E1D127 /* screen_main.cpp in Sources */,
+				930F1DBD1541CF9800E1D127 /* screen_menu.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
