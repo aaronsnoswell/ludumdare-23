@@ -9,6 +9,7 @@ AntColony::AntColony(std::string name, std::string color, float x, float y) {
     this->SetPosition(x, y);
     this->food_store = FOOD_START;
     
+    heal = theSound.LoadSample("Resources/Sounds/heal.wav", false);
     
     this->SetColor(this->color);
     this->SetSize(6.0f);
@@ -34,10 +35,22 @@ void AntColony::Update(float dt) {
     // Update all ants
     std::vector<Ant *> to_remove;
     for(std::vector<Ant *>::iterator i=ants.begin(); i!=ants.end(); i++) {
-        if((*i)->dead) {
+        if((*i)->dead && (*i) != ((Ant *) theGame.player)) {
             to_remove.push_back(*i);
         } else {
             (*i)->Update(dt);
+            
+            // Heal any friendlies who return to the nest
+            if(dist_check(this->GetPosition(), (*i)->GetPosition(), NEST_DROP_RANGE) && (*i)->health != (*i)->health_max) {
+                (*i)->health = (*i)->health_max;
+                
+                // Revive the player if he arrives here
+                (*i)->dead = false;
+                
+                if((*i) == ((Ant *) theGame.player)) {
+                    theSound.PlaySound(heal);
+                }
+            }
         }
     }
     

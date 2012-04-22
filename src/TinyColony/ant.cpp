@@ -1,37 +1,50 @@
 
 #include "ant.h"
 
+#include <sstream>
+
 #include "ant_colony.h"
 #include "food.h"
 #include "player.h"
 
+
+bool Ant::DEBUG_DISPLAY = false;
+
 Ant::Ant(AntColony *team, float x, float y) {
     ANT_SPEED = rand_range(2.0f, 3.0f);
-    ANT_HEALTH = 10;
+    ANT_HEALTH = ANT_START_HEALTH;
     
     this->team = team;
     this->SetPosition(x, y);
     this->SetColor(team->color);
-    this->SetSize(1.8f);
+    this->SetSize(BASE_ANT_SIZE);
     this->SetSprite("Resources/Images/ant.png");
     
     this->level = LEVEL_0;
-    this->points = 0;
+    this->health = ANT_HEALTH;
+    this->health_max = ANT_HEALTH;
+    this->experience = 0;
     this->state = STATE_SEEK_FOOD;
     this->target = NULL;
     this->carrying = NULL;
     this->dead = false;
-    this->health = ANT_HEALTH;
+    this->_can_bite = true;
+    
+    this->my_state = new TextActor("Console", "");
+    this->my_state->SetColor(1, 1, 1);
+    theWorld.Add(this->my_state);
     
     this->_seeking_food = false;
     
     theSwitchboard.SubscribeTo(this, "AntChangeDirection");
-    theSwitchboard.SubscribeTo(this, "AntFadeOut");
-    theSwitchboard.SubscribeTo(this, "AntFadeIn");
+    theSwitchboard.SubscribeTo(this, "AntCanBite");
+    theSwitchboard.SubscribeTo(this, "F1Pressed");
 }
 
 
 void Ant::Update(float dt) {
+    Actor::Update(dt);
+    
     switch (this->state) {
         case STATE_SEEK_FOOD:
             seekFood();
@@ -51,6 +64,9 @@ void Ant::Update(float dt) {
             
         case STATE_FOLLOW_TRAIL:
             followTrail();
+            
+        case STATE_RUN_HOME:
+            runHome();
             break;
             
         default:
@@ -82,9 +98,8 @@ void Ant::Update(float dt) {
     // TODO ajs 22/04/12
     
     // Check for enemy ants and attack them
-    /*
     AntColony *enemy_team = (theGame.blue_colony == this->team) ? theGame.red_colony : theGame.blue_colony;
-    if(this->target == NULL) {
+    if(this->target == NULL || this->target == this->team) {
         for(std::vector<Ant *>::iterator i=enemy_team->ants.begin(); i!=enemy_team->ants.end(); i++) {
             if(dist_check(this->GetPosition(), (*i)->GetPosition(), SIGHT_RANGE)) {
                 // Go attack the ant
@@ -94,20 +109,28 @@ void Ant::Update(float dt) {
             }
         }
     }
-     */
     
     // Check for food
-    /*
     if(this->target == NULL && this->carrying == NULL) {
         for(std::vector<Food *>::iterator i=theGame.foodbits.begin(); i!=theGame.foodbits.end(); i++) {
-            if(dist_check(this->GetPosition(), (*i)->GetPosition(), SIGHT_RANGE) && ((*i)->carriedBy == NULL)) {
-                // Go eat the food
+            if(dist_check(this->GetPosition(), (*i)->GetPosition(), SIGHT_RANGE) && !((*i)->being_carried)) {
+                // Target the food
                 this->target = (*i);
                 this->state = STATE_ATTACK;
             }
         }
     }
-    */
+    
+    // If we're about to die, run home!
+    if(this->health <= 5) {
+        if(this->carrying != NULL) {
+            this->carrying->being_carried = false;
+            this->carrying = NULL;
+        }
+        
+        this->target = this->team;
+        this->state = STATE_RUN_HOME;
+    }
     
     
     // Update position from velocity
@@ -131,12 +154,48 @@ void Ant::Update(float dt) {
         this->SetPosition(tmp.X, WORLD_HEIGHT);
     }
     
+    // Show our current state
+    if(Ant::DEBUG_DISPLAY) {
+        std::stringstream state_str;
+        std::string actual_state = "";
+        
+        if(this->state == STATE_SEEK_FOOD) {
+            actual_state = "SEEK_FOOD";
+        } else if(this->state == STATE_ATTACK) {
+            actual_state = "ATTACK";
+        } else if(this->state == STATE_FOLLOW_TRAIL) {
+            actual_state = "FOLLOW_TRAIL";
+        } else if(this->state == STATE_HELP_ANT) {
+            actual_state = "HELP_ANT";
+        } else if(this->state == STATE_RETURN_FOOD) {
+            actual_state = "RETURN_FOOD";
+        } else if(this->state == STATE_RUN_HOME) {
+            actual_state = "RUN_HOME";
+        }
+        
+        state_str << "State: " << actual_state;
+        this->my_state->SetDisplayString(state_str.str());
+        this->my_state->SetPosition(this->GetPosition());
+        this->my_state->SetColor(1, 1, 1);
+    } else {
+        this->my_state->SetColor(1, 1, 1, 0);
+    }
+    
+    // Bring food with us if we're carrying it
+    if(this->carrying != NULL) {
+        this->carrying->SetPosition(this->GetHeadPosition());
+    }
 }
  
 /**
  * The ant does a random walk whilst looking for food
  */
 void Ant::seekFood() {
+    if(this->carrying != NULL) {
+        this->target = this->team;
+        this->state = STATE_RETURN_FOOD;
+    }
+    
     if(!this->_seeking_food) {
         if(this->velocity != NULL) {
             // Move roughly in the same dirction as we previously were
@@ -157,26 +216,54 @@ void Ant::seekFood() {
  * Returns food to the nest, whilst leaving a trail
  */
 void Ant::returnFood() {
+    if(this->carrying == NULL || this->target == NULL) {
+        // This will only happen if something odd happens
+        // (the ant dies whilst about to drop it's food on the nest)
+        this->target = NULL;
+        this->state = STATE_SEEK_FOOD;
+    }
     
-    
-    
-    /*
     // Make a bee-line for the nest
     Vector2 heading = Vector2::Vector2(this->team->GetPosition());
     heading -= this->GetPosition();
     
-    if(heading.Length() < BITE_RANGE) {
-        this->team->addFood(this->carrying);
+    if(heading.Length() < NEST_DROP_RANGE * 0.5f) {
+        this->carrying->being_carried = false;
         this->carrying = NULL;
         this->target = NULL;
         this->state = STATE_SEEK_FOOD;
+        
+        this->addXP(10);
     }
     
     heading.Normalize();
     heading *= ANT_SPEED * 0.5f;
     
     this->velocity = heading;
-     */
+}
+
+/**
+ * Make a bee-line for the nest
+ */
+void Ant::runHome() {
+    if(this->carrying != NULL) {
+        this->carrying->being_carried = false;
+        this->carrying = NULL;
+    }
+    
+    // Make a bee-line for the nest
+    Vector2 heading = Vector2::Vector2(this->team->GetPosition());
+    heading -= this->GetPosition();
+    
+    if(heading.Length() < NEST_DROP_RANGE * 0.5f) {
+        this->target = NULL;
+        this->state = STATE_SEEK_FOOD;
+    }
+    
+    heading.Normalize();
+    heading *= ANT_SPEED * 0.75f;
+    
+    this->velocity = heading;
 }
 
 /**
@@ -184,42 +271,44 @@ void Ant::returnFood() {
  */
 void Ant::attackTarget() {
     
-    
-    
-    /*
     // Make a bee-line for the target
     Vector2 heading = Vector2::Vector2(this->target->GetPosition());
     heading -= this->GetPosition();
     
-    if(heading.Length() > SIGHT_RANGE) {
+    // If the target leaves our sight, or is picked up, or dies, forget about it
+    float dist = heading.Length();
+    if(dist > SIGHT_RANGE || ((Food *) this->target)->being_carried || ((Ant *) this->target)->dead) {
         this->target = NULL;
         this->state = STATE_SEEK_FOOD;
         return;
+    }
+    
+    if(dist <= BITE_RANGE && this->_can_bite) {
+        this->target->bitten();
+        this->_can_bite = false;
+        theSwitchboard.DeferredBroadcast(new TypedMessage<Ant *>("AntCanBite", this), BITE_DELAY);
+        
+        Food *food = (Food *) this->target;
+        if(food != NULL) {
+            food->being_carried = true;
+            this->carrying = food;
+            this->target = this->team;
+            this->state = STATE_RETURN_FOOD;
+        }
+        
+        // If we killed them, move on
+        Ant *ant = (Ant *) this->target;
+        if(ant != NULL && ant->dead) {
+            this->target = NULL;
+            this->state = STATE_SEEK_FOOD;
+            this->addXP(20);
+        }
     }
     
     heading.Normalize();
     heading *= ANT_SPEED;
     
     this->velocity = heading;
-    
-    if(Vector2::Vector2(this->GetPosition() - this->target->GetPosition()).Length() < BITE_RANGE) {
-        this->target->bite(this);
-        
-        Food *tmp = dynamic_cast<Food *>(this->target);
-        Ant *tmp2 = dynamic_cast<Ant *>(this->target);
-        if(tmp != NULL) {
-            tmp->carriedBy = this;
-            this->carrying = tmp;
-            this->target = NULL;
-            this->state = STATE_RETURN_FOOD;
-        } else if(tmp2 != NULL) {
-            if(tmp2->dead) {
-                this->target = NULL;
-                this->state = STATE_SEEK_FOOD;
-            }
-        }
-    }
-     */
 }
 
 /**
@@ -237,34 +326,44 @@ void Ant::followTrail() {
 }
 
 void Ant::addXP(int points) {
-    this->points += points;
+    this->experience += points;
     
-    if(points > 100) {
+    if(this->experience >= 100) {
         this->levelUp();
     }
 }
 
 void Ant::levelUp() {
+    
     if(this->level == LEVEL_0) {
         this->level = LEVEL_1;
+        this->SetSize(BASE_ANT_SIZE * 1.3f);
     } else if(this->level == LEVEL_1) {
         this->level = LEVEL_2;
+        this->SetSize(BASE_ANT_SIZE * 1.6f);
     } else if(this->level == LEVEL_2) {
         this->level = LEVEL_3;
+        this->SetSize(BASE_ANT_SIZE * 1.9f);
     } else if(this->level == LEVEL_3) {
         this->level = LEVEL_4;
+        this->SetSize(BASE_ANT_SIZE * 2.1f);
     } else if(this->level == LEVEL_4) {
         this->level = LEVEL_5;
+        this->SetSize(BASE_ANT_SIZE * 2.4f);
     } else if(this->level == LEVEL_5) {
         this->level = LEVEL_6;
+        this->SetSize(BASE_ANT_SIZE * 2.7f);
     } else if(this->level == LEVEL_6) {
         this->level = LEVEL_7;
+        this->SetSize(BASE_ANT_SIZE * 3.0f);
     } else {
         return;
     }
     
     this->health += BITE_HURT;
-    this->points = points % 100;
+    this->health_max += BITE_HURT;
+    this->experience = experience % 100;
+    
 }
 
 /**
@@ -277,17 +376,13 @@ void Ant::ReceiveMessage(Message *msg) {
         if(tmp != NULL && tmp->GetValue() == this) {
             this->_seeking_food = false;
         }
-    } else if(msg->GetMessageName() == "AntFadeOut") {
+    } else if(msg->GetMessageName() == "AntCanBite") {
         TypedMessage<Ant *> *tmp = (TypedMessage<Ant *> *) msg;
         if(tmp != NULL && tmp->GetValue() == this) {
-            this->ChangeColorTo(((MyColor) this->GetColor()).setA(0), 0.1f);
-            theSwitchboard.DeferredBroadcast(new TypedMessage<Ant *>("AntFadeIn", this), 0.1f);
+            this->_can_bite = true;
         }
-    } else if(msg->GetMessageName() == "AntFadeIn") {
-        TypedMessage<Ant *> *tmp = (TypedMessage<Ant *> *) msg;
-        if(tmp != NULL && tmp->GetValue() == this) {
-            this->ChangeColorTo(this->team->GetColor(), 0.1f);
-        }
+    } else if(msg->GetMessageName() == "F1Pressed") {
+        Ant::DEBUG_DISPLAY = !Ant::DEBUG_DISPLAY;
     }
 }
 
@@ -297,8 +392,8 @@ void Ant::bitten() {
     if(this->health <= 0 && !this->dead) {
         this->dead = true;
     } else {
-        //theSwitchboard.Broadcast(new TypedMessage<Ant *>("AntFadeOut", this));
-        //this->ChangeColorTo(Color::Color(0,0,0,1), 0.1f);
+        this->SetColor(1.0f, 1.0f, 1.0f, 1.0f);
+        this->ChangeColorTo(this->team->color, 0.75f, true);
     }
 }
 
@@ -309,6 +404,11 @@ Vector2 Ant::GetHeadPosition() {
 void Ant::die() {
     theGame.ForceAddFoodBit(this->GetPosition().X, this->GetPosition().Y);
     
+    if(this->carrying != NULL) {
+        this->carrying->being_carried = false;
+        this->carrying = NULL;
+    }
+    
     int pos = 0;
     for(std::vector<Ant *>::iterator i=this->team->ants.begin(); i!=this->team->ants.end(); i++) {
         if((*i) == this) {
@@ -317,6 +417,7 @@ void Ant::die() {
         pos++;
     }
     
+    theWorld.Remove(this->my_state);
     theWorld.Remove(this);
     this->team->ants.erase(this->team->ants.begin() + pos);
     

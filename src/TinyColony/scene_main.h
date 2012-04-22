@@ -28,13 +28,6 @@ private:
     Game *game;
     
 	virtual void ReceiveMessage(Message *message);
-    virtual void MouseMotionEvent(Vec2i screen_coords);
-    virtual void MouseDownEvent(Vec2i screen_coords, MouseButtonInput button);
-    virtual void MouseUpEvent(Vec2i screen_coords, MouseButtonInput button);
-    virtual void MouseWheelEvent(int position);
-    int _mouse_wheel_pos;
-    
-    Vector2 LMB_DOWN, MMB_DOWN, RMB_DOWN;
 };
 
 

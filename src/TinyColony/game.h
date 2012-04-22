@@ -51,6 +51,8 @@ public:
     AntColony *blue_colony, *red_colony;
     
     Player *player;
+    TextActor *instructions;
+    HUDActor *home_arrow;
     
     void ForceAddFoodBit(float x, float y);
     std::vector<Food *> foodbits;

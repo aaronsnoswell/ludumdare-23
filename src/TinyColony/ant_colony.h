@@ -31,11 +31,13 @@ public:
     friend class Ant;
     
     int food_store;
+    Color color;
     
 protected:
     std::string name;
-    Color color;
     bool _spawning;
+    
+    AngelSoundHandle heal;
     
     virtual void ReceiveMessage(Message *m);
 };

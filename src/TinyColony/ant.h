@@ -26,6 +26,7 @@
 #define STATE_ATTACK        2
 #define STATE_HELP_ANT      3
 #define STATE_FOLLOW_TRAIL  4
+#define STATE_RUN_HOME      5
 
 // How far ants can see
 #define SIGHT_RANGE         10
@@ -33,6 +34,9 @@
 #define BITE_HURT           5
 
 #define ANT_HEAD_LENGTH     0.75f
+#define ANT_START_HEALTH    15
+#define BASE_ANT_SIZE       1.8f
+#define BITE_DELAY          1.0f
 
 // Forward-define AntColony
 class AntColony;
@@ -44,32 +48,37 @@ class Ant : public AntTarget {
 public:
     Ant(AntColony *team, float x, float y);
     
-    void Update(float dt);
-    void addXP(int points);
-    void levelUp();
+    virtual void Update(float dt);
+    virtual void addXP(int points);
+    virtual void levelUp();
     
 	virtual void ReceiveMessage(Message *message);
     virtual void bitten();
     
     friend class Player;
     
+    std::string level;
+    float health_max;
+    float health;
+    int experience;
+    
+    TextActor *my_state;
+    
     bool dead;
     void die();
     
 protected:
     AntColony *team;
-    float health;
-    float stamina;
-    std::string level;
-    int points;
     int state;
     AntTarget *target;
     Food *carrying;
+    bool _can_bite;
     
     float ANT_SPEED;
     float ANT_HEALTH;
     
     Vector2 velocity;
+    static bool DEBUG_DISPLAY;
     
     // The different movement states
     bool _seeking_food;
@@ -78,6 +87,7 @@ protected:
     void attackTarget();
     void helpAnt();
     void followTrail();
+    void runHome();
     
     void dropFood();
     

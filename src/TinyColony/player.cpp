@@ -10,6 +10,12 @@ Player::Player(AntColony *team, float x, float y) : Ant(team, x, y) {
     
     SPACE_PRESSED = LEFT_PRESSED = RIGHT_PRESSED = UP_PRESSED = DOWN_PRESSED = false;
     
+    
+    bite = theSound.LoadSample("Resources/Sounds/bite.wav", false);
+    hurt = theSound.LoadSample("Resources/Sounds/hurt.wav", false);
+    xp = theSound.LoadSample("Resources/Sounds/xp.wav", false);
+    levelup = theSound.LoadSample("Resources/Sounds/levelup.wav", false);
+    
     // Subscribe to events
     theSwitchboard.SubscribeTo(this, "LeftPressed");
     theSwitchboard.SubscribeTo(this, "RightPressed");
@@ -26,6 +32,14 @@ Player::Player(AntColony *team, float x, float y) : Ant(team, x, y) {
 
 
 void Player::Update(float dt) {
+    Actor::Update(dt);
+    
+    if(this->dead) {
+        this->dead = false;
+        this->SetPosition(this->team->GetPosition());
+        this->SetSize(BASE_ANT_SIZE);
+    }
+    
     float x = 0, y = 0;
     
     if(LEFT_PRESSED) {
@@ -41,11 +55,13 @@ void Player::Update(float dt) {
         y += -ANT_SPEED;
     }
     
+    this->velocity = Vector2::Vector2(x, y);
+    
     if(SPACE_PRESSED && this->carrying != NULL) {
         this->carrying->SetPosition(this->GetHeadPosition());
+        this->velocity *= 0.5f;
     }
     
-    this->velocity = Vector2::Vector2(x, y);
     this->SetPosition(this->GetPosition() + this->velocity * dt);
     theCamera.SetPosition(this->GetPosition());
     
@@ -93,10 +109,16 @@ void Player::ReceiveMessage(Message *m) {
         // Cache head position
         Vector2 head_pos = this->GetHeadPosition();
         
+        theSound.PlaySound(bite);
+        
         // Bite any nearby enemy ant
         for(std::vector<Ant *>::iterator i=theGame.red_colony->ants.begin(); i!=theGame.red_colony->ants.end(); i++) {
             if(dist_check(head_pos, (*i)->GetPosition(), BITE_RANGE)) {
                 (*i)->bitten();
+                
+                if((*i)->dead) {
+                    this->addXP(20);
+                }
             }
         }
         
@@ -125,26 +147,55 @@ void Player::ReceiveMessage(Message *m) {
         SPACE_PRESSED = false;
         
         // Release the foodbit
-        if(this->carrying) this->carrying->being_carried = false;
+        if(this->carrying != NULL) {
+            this->carrying->being_carried = false;
+            
+            if(dist_check(this->carrying->GetPosition(), this->team->GetPosition(), NEST_DROP_RANGE)) {
+                this->addXP(10);
+            }
+            
+        }
         this->carrying = NULL;
         
     }
 }
 
-void Player::bite(Ant *a) {
+void Player::addXP(int points) {
+    Ant::addXP(points);
+    theSound.PlaySound(xp);
+}
+
+void Player::levelUp() {
+    Ant::levelUp();
+    theSound.PlaySound(levelup);
+}
+
+void Player::bitten() {
     this->health -= BITE_HURT;
+    theSound.PlaySound(hurt);
     
     if(this->health <= 0) {
         this->die();
+    } else {
+        this->SetColor(1.0f, 1.0f, 1.0f, 1.0f);
+        this->ChangeColorTo(this->team->color, 0.75f, true);
     }
 }
 
 void Player::die() {
+    this->dead = true;
     theGame.ForceAddFoodBit(this->GetPosition().X, this->GetPosition().Y);
     
+    if(this->carrying != NULL) {
+        this->carrying->being_carried = false;
+        this->carrying = NULL;
+    }
+    
     this->health = ANT_HEALTH;
+    this->experience = 0;
     this->level = LEVEL_0;
-    this->SetPosition(this->team->GetPosition());
+    
+    // Player position is updated in the Update function
 }
 
 

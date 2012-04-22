@@ -11,12 +11,17 @@ public:
     
     virtual void Update(float dt);
     virtual void ReceiveMessage(Message *m);
-    virtual void bite(Ant *a);
+    virtual void bitten();
+    virtual void addXP(int points);
+    virtual void levelUp();
+    
     
 private:
     bool SPACE_PRESSED, LEFT_PRESSED, RIGHT_PRESSED, UP_PRESSED, DOWN_PRESSED;
     
     void die();
+    
+    AngelSampleHandle bite, hurt, xp, levelup;
     
 };
 

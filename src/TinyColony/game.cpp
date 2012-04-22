@@ -11,7 +11,7 @@ Game::Game() {
     // Create the world
     ground = new Actor();
     //ground->SetColor(Color::FromHexString(GROUND_COLOR));
-    ground->SetSize(WORLD_WIDTH * 2);
+    ground->SetSize(WORLD_WIDTH * 3);
     ground->SetSprite("Resources/Images/dirt.png", 0, GL_REPEAT);
     ground->SetColor(1, 1, 1, 1);
     ground->SetUVs(*(new Vector2(0, 0)), *(new Vector2(17.0f, 20.0f)));
@@ -40,7 +40,7 @@ Game::Game() {
     // Create the Time-Of-Day actor
     time_shade = new Actor();
     time_shade->SetColor(((MyColor) Color::FromHexString("#070922")).setA(0.0f));
-    time_shade->SetSize(WORLD_WIDTH * 2);
+    time_shade->SetSize(WORLD_WIDTH * 3);
     theWorld.Add(time_shade, LAYER_TIMESHADE);
     
     
@@ -50,6 +50,14 @@ Game::Game() {
     red_colony = new AntColony("Red", "#ff1111", rand_range(-WORLD_WIDTH, WORLD_WIDTH), rand_range(-WORLD_HEIGHT, WORLD_HEIGHT));
     theWorld.Add(red_colony, LAYER_NEST);
     
+    
+    instructions = new TextActor("Console", "Aloha! Thanks for trying my game\nYou are a tiny ant in a tiny world.\nThis is your colony. Your goal is to defend it,\nand defeat the red ants.\n\nUse the arrow keys or WASD to move, SPACE to bite.\nCollect food (   ) and kill red ants to level up!\n\nMost importantly, Have fun!\n\n~Aaron Snoswell (Enter dismisses this message)");
+    instructions->SetPosition(blue_colony->GetPosition() + Vector2::Vector2(3.5f, 2));
+    instructions->SetColor(1, 1, 1);
+    theWorld.Add(instructions);
+    
+    this->ForceAddFoodBit(blue_colony->GetPosition().X + 8.45f, blue_colony->GetPosition().Y - 1.9f);
+    
     player = new Player(blue_colony, blue_colony->GetPosition().X, blue_colony->GetPosition().Y);
     blue_colony->ants.push_back(player);
     theWorld.Add(player, LAYER_ANT);
@@ -57,9 +65,17 @@ Game::Game() {
     // Add an ant to the reds to even things out
     red_colony->ForceSpawnAnt();
     
+    home_arrow = new HUDActor();
+    home_arrow->SetPosition(theCamera.GetWindowWidth() - 60, theCamera.GetWindowHeight() - 60);
+    home_arrow->SetSize(100);
+    home_arrow->SetSprite("Resources/Images/arrow.png");
+    home_arrow->SetColor(blue_colony->color);
+    theWorld.Add(home_arrow, LAYER_TIMESHADE + 1);
+    
     // Subscribe to messages
     theSwitchboard.SubscribeTo(this, "TIME_MIDDAY");
     theSwitchboard.SubscribeTo(this, "TIME_MIDNIGHT");
+    theSwitchboard.SubscribeTo(this, "EnterPressed");
 }
 
 Game& Game::GetInstance() {
@@ -92,7 +108,7 @@ void Game::Update(float dt) {
     blue_colony->Update(dt);
     red_colony->Update(dt);
     
-    // Check for any foodbits that are pedning removal
+    // Check for any foodbits that are pending removal
     std::vector<Food *> consumed_food;
     for(std::vector<Food *>::iterator i=foodbits.begin(); i!=foodbits.end(); i++) {
         if((*i)->consumed) {
@@ -102,6 +118,18 @@ void Game::Update(float dt) {
     for(int i=0; i<consumed_food.size(); i++) {
         consumed_food[i]->Remove();
     }
+    
+    if(red_colony->ants.size() == 0) {
+        instructions->SetDisplayString("Victory! The red ant amry has been crushed!");
+        instructions->SetPosition(player->GetPosition());
+        instructions->SetColor(1, 1, 1);
+    }
+    
+    // Update the radar arrow
+    Vector2 delta = Vector2::Vector2(player->GetPosition() - blue_colony->GetPosition());
+    float scale = 45/atan(1);
+    float angle = (scale*atan2(delta.Y, delta.X))+90;
+    home_arrow->SetRotation(angle);
 }
 
 void Game::ReceiveMessage(Message *message) {
@@ -109,6 +137,8 @@ void Game::ReceiveMessage(Message *message) {
         time_shade->ChangeColorTo(((MyColor) time_shade->GetColor()).setA(0.5f), DAY_CYCLE_LENGTH, true, "TIME_MIDNIGHT");
     } else if(message->GetMessageName() == "TIME_MIDNIGHT") {
         time_shade->ChangeColorTo(((MyColor) time_shade->GetColor()).setA(0.0f), DAY_CYCLE_LENGTH, true, "TIME_MIDDAY");
+    } else if(message->GetMessageName() == "EnterPressed") {
+        instructions->ChangeColorTo(Color::Color(1,1,1,0), 1.0f);
     }
 }
 

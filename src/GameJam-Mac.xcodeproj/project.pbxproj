@@ -284,9 +284,6 @@
 		34810B240E68450000246544 /* libfmodex.dylib in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 34810A050E679FE500246544 /* libfmodex.dylib */; };
 		3489C3D9130CEAAB0034F4FB /* MobileSimulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3489C3D7130CEAAB0034F4FB /* MobileSimulator.h */; };
 		3489C3DA130CEAAB0034F4FB /* MobileSimulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3489C3D8130CEAAB0034F4FB /* MobileSimulator.cpp */; };
-		34974A320E2925BE0018A032 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34974A300E2925BE0018A032 /* stdafx.cpp */; };
-		34974A330E2925BE0018A032 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34974A310E2925BE0018A032 /* Main.cpp */; };
-		34974A3B0E2926460018A032 /* stdafx.h in Headers */ = {isa = PBXBuildFile; fileRef = 34974A2F0E2925BE0018A032 /* stdafx.h */; };
 		34974B2F0E2926FB0018A032 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A18C9B0E284445001C79A5 /* OpenGL.framework */; };
 		34974B3A0E2927E00018A032 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34974B390E2927E00018A032 /* AGL.framework */; };
 		34974B3D0E2927E80018A032 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34974B390E2927E00018A032 /* AGL.framework */; };
@@ -349,7 +346,6 @@
 		34D6B4BC11CC3CF700D72FE6 /* libLua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34EECBDC11CB922100667B26 /* libLua.a */; };
 		34D6B4C511CC3D1F00D72FE6 /* lua.c in Sources */ = {isa = PBXBuildFile; fileRef = 34D6B4C411CC3D1F00D72FE6 /* lua.c */; };
 		34D6C166134762C500D82C14 /* angel.icns in Copy Icon */ = {isa = PBXBuildFile; fileRef = 34D6C1511347619800D82C14 /* angel.icns */; };
-		34D6C1721347638F00D82C14 /* angel.icns in Copy Icon */ = {isa = PBXBuildFile; fileRef = 34D6C1701347636500D82C14 /* angel.icns */; };
 		34E762841338C6F600BA9A3C /* libIL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E7627C1338C6F600BA9A3C /* libIL.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		34E762851338C6F600BA9A3C /* libILU.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E7627D1338C6F600BA9A3C /* libILU.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
 		34E762861338C6F600BA9A3C /* libILUT.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E7627E1338C6F600BA9A3C /* libILUT.dylib */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -526,26 +522,32 @@
 		34F03D9B14FB1FD6009A3EC4 /* b2WheelJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F03D8514FB1FD6009A3EC4 /* b2WheelJoint.h */; };
 		34F03D9F14FB2015009A3EC4 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34F03D9D14FB2015009A3EC4 /* b2Rope.cpp */; };
 		34F03DA014FB2015009A3EC4 /* b2Rope.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F03D9E14FB2015009A3EC4 /* b2Rope.h */; };
-		930F1DB91541CF9800E1D127 /* scene_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 930F1DB31541CF9800E1D127 /* scene_manager.cpp */; };
-		930F1DBA1541CF9800E1D127 /* scene_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 930F1DB41541CF9800E1D127 /* scene_manager.h */; };
-		930F1DBB1541CF9800E1D127 /* scene_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 930F1DB51541CF9800E1D127 /* scene_main.cpp */; };
-		930F1DBC1541CF9800E1D127 /* scene_main.h in Headers */ = {isa = PBXBuildFile; fileRef = 930F1DB61541CF9800E1D127 /* scene_main.h */; };
-		930F1DC81542702F00E1D127 /* color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 930F1DC61542702F00E1D127 /* color.cpp */; };
-		930F1DC91542702F00E1D127 /* color.h in Headers */ = {isa = PBXBuildFile; fileRef = 930F1DC71542702F00E1D127 /* color.h */; };
-		93221FBF1542D289009AB608 /* food.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93221FBD1542D289009AB608 /* food.cpp */; };
-		93221FC01542D289009AB608 /* food.h in Headers */ = {isa = PBXBuildFile; fileRef = 93221FBE1542D289009AB608 /* food.h */; };
-		9374D71F1543B01500DB2EC3 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9374D71D1543B01500DB2EC3 /* player.cpp */; };
-		9374D7201543B01500DB2EC3 /* player.h in Headers */ = {isa = PBXBuildFile; fileRef = 9374D71E1543B01500DB2EC3 /* player.h */; };
-		93962600154291BD00EC6D73 /* ant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 939625FE154291BD00EC6D73 /* ant.cpp */; };
-		93962601154291BD00EC6D73 /* ant.h in Headers */ = {isa = PBXBuildFile; fileRef = 939625FF154291BD00EC6D73 /* ant.h */; };
-		939626041542B1A100EC6D73 /* math_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 939626021542B1A100EC6D73 /* math_utils.cpp */; };
-		939626051542B1A100EC6D73 /* math_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 939626031542B1A100EC6D73 /* math_utils.h */; };
-		9396260C1542C3C200EC6D73 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9396260A1542C3C200EC6D73 /* game.cpp */; };
-		9396260D1542C3C200EC6D73 /* game.h in Headers */ = {isa = PBXBuildFile; fileRef = 9396260B1542C3C200EC6D73 /* game.h */; };
-		93E342FC1542D9F90004B350 /* ant_target.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93E342FA1542D9F90004B350 /* ant_target.cpp */; };
-		93E342FD1542D9F90004B350 /* ant_target.h in Headers */ = {isa = PBXBuildFile; fileRef = 93E342FB1542D9F90004B350 /* ant_target.h */; };
-		93E343001542DA9D0004B350 /* ant_colony.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93E342FE1542DA9D0004B350 /* ant_colony.cpp */; };
-		93E343011542DA9D0004B350 /* ant_colony.h in Headers */ = {isa = PBXBuildFile; fileRef = 93E342FF1542DA9D0004B350 /* ant_colony.h */; };
+		93F63D7A1544954500D9A54E /* ant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D251544954500D9A54E /* ant.cpp */; };
+		93F63D7B1544954500D9A54E /* ant.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D261544954500D9A54E /* ant.h */; };
+		93F63D7C1544954500D9A54E /* ant_colony.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D271544954500D9A54E /* ant_colony.cpp */; };
+		93F63D7D1544954500D9A54E /* ant_colony.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D281544954500D9A54E /* ant_colony.h */; };
+		93F63D7E1544954500D9A54E /* ant_target.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D291544954500D9A54E /* ant_target.cpp */; };
+		93F63D7F1544954500D9A54E /* ant_target.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D2A1544954500D9A54E /* ant_target.h */; };
+		93F63D801544954500D9A54E /* color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D2D1544954500D9A54E /* color.cpp */; };
+		93F63D811544954500D9A54E /* color.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D2E1544954500D9A54E /* color.h */; };
+		93F63D821544954500D9A54E /* food.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D391544954500D9A54E /* food.cpp */; };
+		93F63D831544954500D9A54E /* food.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D3A1544954500D9A54E /* food.h */; };
+		93F63D841544954500D9A54E /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D3B1544954500D9A54E /* game.cpp */; };
+		93F63D851544954500D9A54E /* game.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D3C1544954500D9A54E /* game.h */; };
+		93F63D861544954500D9A54E /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D3E1544954500D9A54E /* Main.cpp */; };
+		93F63D881544954500D9A54E /* math_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D401544954500D9A54E /* math_utils.cpp */; };
+		93F63D891544954500D9A54E /* math_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D411544954500D9A54E /* math_utils.h */; };
+		93F63D8A1544954500D9A54E /* iPhoneMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D4E1544954500D9A54E /* iPhoneMain.cpp */; };
+		93F63D8B1544954500D9A54E /* iPhoneMain.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D4F1544954500D9A54E /* iPhoneMain.h */; };
+		93F63D8C1544954500D9A54E /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D581544954500D9A54E /* player.cpp */; };
+		93F63D8D1544954500D9A54E /* player.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D591544954500D9A54E /* player.h */; };
+		93F63D8E1544954500D9A54E /* scene_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D721544954500D9A54E /* scene_main.cpp */; };
+		93F63D8F1544954500D9A54E /* scene_main.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D731544954500D9A54E /* scene_main.h */; };
+		93F63D901544954500D9A54E /* scene_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D741544954500D9A54E /* scene_manager.cpp */; };
+		93F63D911544954500D9A54E /* scene_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D751544954500D9A54E /* scene_manager.h */; };
+		93F63D931544954500D9A54E /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93F63D771544954500D9A54E /* stdafx.cpp */; };
+		93F63D941544954500D9A54E /* stdafx.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F63D781544954500D9A54E /* stdafx.h */; };
+		93F63D95154495D000D9A54E /* icon.icns in Copy Icon */ = {isa = PBXBuildFile; fileRef = 9374D72D154491C200DB2EC3 /* icon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -674,7 +676,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				34D6C1721347638F00D82C14 /* angel.icns in Copy Icon */,
+				93F63D95154495D000D9A54E /* icon.icns in Copy Icon */,
 			);
 			name = "Copy Icon";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -900,8 +902,6 @@
 		346E5EA60F30122000258B84 /* DemoScreenIntervals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoScreenIntervals.h; path = IntroGame/DemoScreens/DemoScreenIntervals.h; sourceTree = "<group>"; };
 		346EFC170FE4464E00BC2C5C /* tuning.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = tuning.i; path = Angel/Scripting/Interfaces/tuning.i; sourceTree = "<group>"; };
 		34713D740EA6D65C00AF58CA /* particles.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = particles.i; path = Angel/Scripting/Interfaces/particles.i; sourceTree = "<group>"; };
-		34713D900EA6D6F800AF58CA /* Config */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Config; path = ClientGame/Config; sourceTree = "<group>"; };
-		34713D990EA6D71100AF58CA /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = ClientGame/Resources; sourceTree = "<group>"; };
 		34713DF40EA6E3CF00AF58CA /* text_actor.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = text_actor.i; path = Angel/Scripting/Interfaces/text_actor.i; sourceTree = "<group>"; };
 		3472777C0F3E95E100F947AE /* mouse.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = mouse.i; path = Angel/Scripting/Interfaces/mouse.i; sourceTree = "<group>"; };
 		3473838411D061A500088BB9 /* LuaConsole.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LuaConsole.cpp; path = Angel/Scripting/LuaConsole.cpp; sourceTree = "<group>"; };
@@ -910,9 +910,7 @@
 		3473839B11D062BD00088BB9 /* lfs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lfs.h; path = "Angel/Libraries/lua-libs/luafilesystem-1.5.0/src/lfs.h"; sourceTree = "<group>"; };
 		347C79F511D457DE0034DAD9 /* conf_load.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = conf_load.lua; sourceTree = "<group>"; };
 		347C79F611D457DE0034DAD9 /* util.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = util.lua; sourceTree = "<group>"; };
-		347CFFE411DC239200761E0E /* script_interface.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = script_interface.i; path = ClientGame/script_interface.i; sourceTree = "<group>"; };
 		347CFFE511DC23B500761E0E /* script_interface.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = script_interface.i; path = IntroGame/script_interface.i; sourceTree = "<group>"; };
-		347CFFF111DC243000761E0E /* build.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = build.lua; path = ClientGame/build.lua; sourceTree = "<group>"; };
 		348109EE0E679CCA00246544 /* SoundDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundDevice.h; sourceTree = "<group>"; };
 		348109EF0E679CCA00246544 /* SoundDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundDevice.cpp; sourceTree = "<group>"; };
 		34810A040E679FE500246544 /* libfmodexL.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmodexL.dylib; path = Angel/Libraries/FMOD/libfmodexL.dylib; sourceTree = "<group>"; };
@@ -923,9 +921,6 @@
 		3489C3D8130CEAAB0034F4FB /* MobileSimulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MobileSimulator.cpp; sourceTree = "<group>"; };
 		348D1E1D0FC1066700A64A55 /* TuningVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuningVariable.h; sourceTree = "<group>"; };
 		348D1E1E0FC1066700A64A55 /* TuningVariable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TuningVariable.cpp; sourceTree = "<group>"; };
-		34974A2F0E2925BE0018A032 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stdafx.h; path = ClientGame/stdafx.h; sourceTree = "<group>"; };
-		34974A300E2925BE0018A032 /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stdafx.cpp; path = ClientGame/stdafx.cpp; sourceTree = "<group>"; };
-		34974A310E2925BE0018A032 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = ClientGame/Main.cpp; sourceTree = "<group>"; };
 		34974B390E2927E00018A032 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		34974BB40E292E240018A032 /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		34974BB50E292E240018A032 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
@@ -1053,8 +1048,6 @@
 		34D34DF80E2C375A0053994C /* DemoScreenSimpleActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoScreenSimpleActor.h; path = IntroGame/DemoScreens/DemoScreenSimpleActor.h; sourceTree = "<group>"; };
 		34D34E390E2C376A0053994C /* IntroGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntroGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D34E4A0E2C38250053994C /* Attributions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Attributions.txt; path = IntroGame/Documentation/Attributions.txt; sourceTree = "<group>"; };
-		34D34E4B0E2C38480053994C /* GameInfo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GameInfo.txt; path = ClientGame/Documentation/GameInfo.txt; sourceTree = "<group>"; };
-		34D34E4C0E2C38480053994C /* Attributions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Attributions.txt; path = ClientGame/Documentation/Attributions.txt; sourceTree = "<group>"; };
 		34D34E8D0E2C39D10053994C /* ClientGameInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ClientGameInfo.plist; path = ClientGame/platforms/mac/ClientGameInfo.plist; sourceTree = "<group>"; };
 		34D34E8E0E2C39D10053994C /* IntroGameInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = IntroGameInfo.plist; path = IntroGame/platforms/mac/IntroGameInfo.plist; sourceTree = "<group>"; };
 		34D6B4B611CC3CCA00D72FE6 /* Lua */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lua; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1247,27 +1240,78 @@
 		34F03D9E14FB2015009A3EC4 /* b2Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = b2Rope.h; path = "Angel/Libraries/Box2D-2.2.1/Box2D/Rope/b2Rope.h"; sourceTree = "<group>"; };
 		34F1FF300E5D31DB0065CD22 /* angel.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = angel.i; path = Angel/Scripting/Interfaces/angel.i; sourceTree = "<group>"; };
 		34F1FFD80E5D3F910065CD22 /* world.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = world.i; path = Angel/Scripting/Interfaces/world.i; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* ClientGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClientGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		930F1DB31541CF9800E1D127 /* scene_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scene_manager.cpp; path = ClientGame/scene_manager.cpp; sourceTree = "<group>"; };
-		930F1DB41541CF9800E1D127 /* scene_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scene_manager.h; path = ClientGame/scene_manager.h; sourceTree = "<group>"; };
-		930F1DB51541CF9800E1D127 /* scene_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scene_main.cpp; path = ClientGame/scene_main.cpp; sourceTree = "<group>"; };
-		930F1DB61541CF9800E1D127 /* scene_main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scene_main.h; path = ClientGame/scene_main.h; sourceTree = "<group>"; };
-		930F1DC61542702F00E1D127 /* color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = color.cpp; path = ClientGame/color.cpp; sourceTree = "<group>"; };
-		930F1DC71542702F00E1D127 /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = color.h; path = ClientGame/color.h; sourceTree = "<group>"; };
-		93221FBD1542D289009AB608 /* food.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = food.cpp; path = ClientGame/food.cpp; sourceTree = "<group>"; };
-		93221FBE1542D289009AB608 /* food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = food.h; path = ClientGame/food.h; sourceTree = "<group>"; };
-		9374D71D1543B01500DB2EC3 /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = player.cpp; path = ClientGame/player.cpp; sourceTree = "<group>"; };
-		9374D71E1543B01500DB2EC3 /* player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = player.h; path = ClientGame/player.h; sourceTree = "<group>"; };
-		939625FE154291BD00EC6D73 /* ant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ant.cpp; path = ClientGame/ant.cpp; sourceTree = "<group>"; };
-		939625FF154291BD00EC6D73 /* ant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ant.h; path = ClientGame/ant.h; sourceTree = "<group>"; };
-		939626021542B1A100EC6D73 /* math_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = math_utils.cpp; path = ClientGame/math_utils.cpp; sourceTree = "<group>"; };
-		939626031542B1A100EC6D73 /* math_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = math_utils.h; path = ClientGame/math_utils.h; sourceTree = "<group>"; };
-		9396260A1542C3C200EC6D73 /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = game.cpp; path = ClientGame/game.cpp; sourceTree = "<group>"; };
-		9396260B1542C3C200EC6D73 /* game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = game.h; path = ClientGame/game.h; sourceTree = "<group>"; };
-		93E342FA1542D9F90004B350 /* ant_target.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ant_target.cpp; path = ClientGame/ant_target.cpp; sourceTree = "<group>"; };
-		93E342FB1542D9F90004B350 /* ant_target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ant_target.h; path = ClientGame/ant_target.h; sourceTree = "<group>"; };
-		93E342FE1542DA9D0004B350 /* ant_colony.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ant_colony.cpp; path = ClientGame/ant_colony.cpp; sourceTree = "<group>"; };
-		93E342FF1542DA9D0004B350 /* ant_colony.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ant_colony.h; path = ClientGame/ant_colony.h; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* TinyColony.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyColony.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9374D72D154491C200DB2EC3 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		93F63D251544954500D9A54E /* ant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ant.cpp; sourceTree = "<group>"; };
+		93F63D261544954500D9A54E /* ant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ant.h; sourceTree = "<group>"; };
+		93F63D271544954500D9A54E /* ant_colony.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ant_colony.cpp; sourceTree = "<group>"; };
+		93F63D281544954500D9A54E /* ant_colony.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ant_colony.h; sourceTree = "<group>"; };
+		93F63D291544954500D9A54E /* ant_target.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ant_target.cpp; sourceTree = "<group>"; };
+		93F63D2A1544954500D9A54E /* ant_target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ant_target.h; sourceTree = "<group>"; };
+		93F63D2B1544954500D9A54E /* build.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = build.lua; sourceTree = "<group>"; };
+		93F63D2C1544954500D9A54E /* ClientGame.vcproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ClientGame.vcproj; sourceTree = "<group>"; };
+		93F63D2D1544954500D9A54E /* color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = color.cpp; sourceTree = "<group>"; };
+		93F63D2E1544954500D9A54E /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
+		93F63D311544954500D9A54E /* actor_def.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = actor_def.lua; sourceTree = "<group>"; };
+		93F63D321544954500D9A54E /* defaults.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = defaults.lua; sourceTree = "<group>"; };
+		93F63D331544954500D9A54E /* input_bindings.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input_bindings.ini; sourceTree = "<group>"; };
+		93F63D351544954500D9A54E /* tuning.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tuning.lua; sourceTree = "<group>"; };
+		93F63D371544954500D9A54E /* Attributions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Attributions.txt; sourceTree = "<group>"; };
+		93F63D381544954500D9A54E /* GameInfo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GameInfo.txt; sourceTree = "<group>"; };
+		93F63D391544954500D9A54E /* food.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = food.cpp; sourceTree = "<group>"; };
+		93F63D3A1544954500D9A54E /* food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = food.h; sourceTree = "<group>"; };
+		93F63D3B1544954500D9A54E /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		93F63D3C1544954500D9A54E /* game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game.h; sourceTree = "<group>"; };
+		93F63D3E1544954500D9A54E /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		93F63D3F1544954500D9A54E /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		93F63D401544954500D9A54E /* math_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = math_utils.cpp; sourceTree = "<group>"; };
+		93F63D411544954500D9A54E /* math_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math_utils.h; sourceTree = "<group>"; };
+		93F63D441544954500D9A54E /* ClientGameInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClientGameInfo.plist; sourceTree = "<group>"; };
+		93F63D451544954500D9A54E /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
+		93F63D461544954500D9A54E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		93F63D471544954500D9A54E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		93F63D481544954500D9A54E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		93F63D491544954500D9A54E /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		93F63D4A1544954500D9A54E /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		93F63D4B1544954500D9A54E /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		93F63D4C1544954500D9A54E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		93F63D4D1544954500D9A54E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		93F63D4E1544954500D9A54E /* iPhoneMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = iPhoneMain.cpp; sourceTree = "<group>"; };
+		93F63D4F1544954500D9A54E /* iPhoneMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneMain.h; sourceTree = "<group>"; };
+		93F63D501544954500D9A54E /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		93F63D531544954500D9A54E /* angel.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = angel.icns; sourceTree = "<group>"; };
+		93F63D541544954500D9A54E /* ClientGameInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClientGameInfo.plist; sourceTree = "<group>"; };
+		93F63D561544954500D9A54E /* angel.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = angel.ico; sourceTree = "<group>"; };
+		93F63D571544954500D9A54E /* angel_small.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = angel_small.ico; sourceTree = "<group>"; };
+		93F63D581544954500D9A54E /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
+		93F63D591544954500D9A54E /* player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
+		93F63D5C1544954500D9A54E /* Inconsolata.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inconsolata.otf; sourceTree = "<group>"; };
+		93F63D5E1544954500D9A54E /* ant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ant.png; sourceTree = "<group>"; };
+		93F63D5F1544954500D9A54E /* anthill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anthill.png; sourceTree = "<group>"; };
+		93F63D601544954500D9A54E /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		93F63D611544954500D9A54E /* dirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dirt.png; sourceTree = "<group>"; };
+		93F63D621544954500D9A54E /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
+		93F63D641544954500D9A54E /* autocomplete.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = autocomplete.lua; sourceTree = "<group>"; };
+		93F63D651544954500D9A54E /* client_start.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = client_start.lua; sourceTree = "<group>"; };
+		93F63D661544954500D9A54E /* conf_load.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = conf_load.lua; sourceTree = "<group>"; };
+		93F63D671544954500D9A54E /* pref_load.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pref_load.lua; sourceTree = "<group>"; };
+		93F63D681544954500D9A54E /* start.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.lua; sourceTree = "<group>"; };
+		93F63D691544954500D9A54E /* sugar.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sugar.lua; sourceTree = "<group>"; };
+		93F63D6A1544954500D9A54E /* util.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = util.lua; sourceTree = "<group>"; };
+		93F63D6C1544954500D9A54E /* bite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bite.wav; sourceTree = "<group>"; };
+		93F63D6D1544954500D9A54E /* heal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heal.wav; sourceTree = "<group>"; };
+		93F63D6E1544954500D9A54E /* hurt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hurt.wav; sourceTree = "<group>"; };
+		93F63D6F1544954500D9A54E /* levelup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelup.wav; sourceTree = "<group>"; };
+		93F63D701544954500D9A54E /* xp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = xp.wav; sourceTree = "<group>"; };
+		93F63D711544954500D9A54E /* xylophone.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = xylophone.ogg; sourceTree = "<group>"; };
+		93F63D721544954500D9A54E /* scene_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene_main.cpp; sourceTree = "<group>"; };
+		93F63D731544954500D9A54E /* scene_main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene_main.h; sourceTree = "<group>"; };
+		93F63D741544954500D9A54E /* scene_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene_manager.cpp; sourceTree = "<group>"; };
+		93F63D751544954500D9A54E /* scene_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene_manager.h; sourceTree = "<group>"; };
+		93F63D761544954500D9A54E /* script_interface.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = script_interface.i; sourceTree = "<group>"; };
+		93F63D771544954500D9A54E /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
+		93F63D781544954500D9A54E /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		93F63D791544954500D9A54E /* tags */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tags; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1399,7 +1443,7 @@
 			isa = PBXGroup;
 			children = (
 				34D34E390E2C376A0053994C /* IntroGame.app */,
-				8D1107320486CEB800E47090 /* ClientGame.app */,
+				8D1107320486CEB800E47090 /* TinyColony.app */,
 				34A18BA70E284044001C79A5 /* libBox2D.a */,
 				34A18C510E284362001C79A5 /* libGLFW.a */,
 				346E3BB90E28637A00E6C79E /* libFTGL.a */,
@@ -1417,9 +1461,10 @@
 		29B97314FDCFA39411CA2CEA /* GameJam */ = {
 			isa = PBXGroup;
 			children = (
+				93F63D241544954500D9A54E /* TinyColony */,
+				9374D72D154491C200DB2EC3 /* icon.icns */,
 				34A18BAD0E2841CC001C79A5 /* Angel Framework */,
 				34D34DB10E2C36E40053994C /* IntroGame */,
-				34974A2B0E29259A0018A032 /* ClientGame */,
 				34A18C990E284421001C79A5 /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -1830,15 +1875,6 @@
 			name = "Additional Libs";
 			sourceTree = "<group>";
 		};
-		347CFFE811DC23E100761E0E /* PCH */ = {
-			isa = PBXGroup;
-			children = (
-				34974A2F0E2925BE0018A032 /* stdafx.h */,
-				34974A300E2925BE0018A032 /* stdafx.cpp */,
-			);
-			name = PCH;
-			sourceTree = "<group>";
-		};
 		34810A550E67B39200246544 /* EngineScripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1850,41 +1886,6 @@
 			);
 			name = EngineScripts;
 			path = Angel/Scripting/EngineScripts;
-			sourceTree = "<group>";
-		};
-		34974A2B0E29259A0018A032 /* ClientGame */ = {
-			isa = PBXGroup;
-			children = (
-				9374D71D1543B01500DB2EC3 /* player.cpp */,
-				9374D71E1543B01500DB2EC3 /* player.h */,
-				93E342FE1542DA9D0004B350 /* ant_colony.cpp */,
-				93E342FF1542DA9D0004B350 /* ant_colony.h */,
-				93E342FA1542D9F90004B350 /* ant_target.cpp */,
-				93E342FB1542D9F90004B350 /* ant_target.h */,
-				93221FBD1542D289009AB608 /* food.cpp */,
-				93221FBE1542D289009AB608 /* food.h */,
-				9396260A1542C3C200EC6D73 /* game.cpp */,
-				9396260B1542C3C200EC6D73 /* game.h */,
-				939626021542B1A100EC6D73 /* math_utils.cpp */,
-				939626031542B1A100EC6D73 /* math_utils.h */,
-				939625FE154291BD00EC6D73 /* ant.cpp */,
-				939625FF154291BD00EC6D73 /* ant.h */,
-				930F1DC61542702F00E1D127 /* color.cpp */,
-				930F1DC71542702F00E1D127 /* color.h */,
-				930F1DB31541CF9800E1D127 /* scene_manager.cpp */,
-				930F1DB41541CF9800E1D127 /* scene_manager.h */,
-				930F1DB51541CF9800E1D127 /* scene_main.cpp */,
-				930F1DB61541CF9800E1D127 /* scene_main.h */,
-				347CFFE811DC23E100761E0E /* PCH */,
-				34713D900EA6D6F800AF58CA /* Config */,
-				34713D990EA6D71100AF58CA /* Resources */,
-				34D34E4C0E2C38480053994C /* Attributions.txt */,
-				34D34E4B0E2C38480053994C /* GameInfo.txt */,
-				347CFFE411DC239200761E0E /* script_interface.i */,
-				347CFFF111DC243000761E0E /* build.lua */,
-				34974A310E2925BE0018A032 /* Main.cpp */,
-			);
-			name = ClientGame;
 			sourceTree = "<group>";
 		};
 		34974B850E2929B90018A032 /* Mac Build */ = {
@@ -2386,6 +2387,203 @@
 			name = Interfaces;
 			sourceTree = "<group>";
 		};
+		93F63D241544954500D9A54E /* TinyColony */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D251544954500D9A54E /* ant.cpp */,
+				93F63D261544954500D9A54E /* ant.h */,
+				93F63D271544954500D9A54E /* ant_colony.cpp */,
+				93F63D281544954500D9A54E /* ant_colony.h */,
+				93F63D291544954500D9A54E /* ant_target.cpp */,
+				93F63D2A1544954500D9A54E /* ant_target.h */,
+				93F63D2B1544954500D9A54E /* build.lua */,
+				93F63D2C1544954500D9A54E /* ClientGame.vcproj */,
+				93F63D2D1544954500D9A54E /* color.cpp */,
+				93F63D2E1544954500D9A54E /* color.h */,
+				93F63D2F1544954500D9A54E /* Config */,
+				93F63D361544954500D9A54E /* Documentation */,
+				93F63D391544954500D9A54E /* food.cpp */,
+				93F63D3A1544954500D9A54E /* food.h */,
+				93F63D3B1544954500D9A54E /* game.cpp */,
+				93F63D3C1544954500D9A54E /* game.h */,
+				93F63D3D1544954500D9A54E /* Logs */,
+				93F63D3E1544954500D9A54E /* Main.cpp */,
+				93F63D3F1544954500D9A54E /* Makefile */,
+				93F63D401544954500D9A54E /* math_utils.cpp */,
+				93F63D411544954500D9A54E /* math_utils.h */,
+				93F63D421544954500D9A54E /* platforms */,
+				93F63D581544954500D9A54E /* player.cpp */,
+				93F63D591544954500D9A54E /* player.h */,
+				93F63D5A1544954500D9A54E /* Resources */,
+				93F63D721544954500D9A54E /* scene_main.cpp */,
+				93F63D731544954500D9A54E /* scene_main.h */,
+				93F63D741544954500D9A54E /* scene_manager.cpp */,
+				93F63D751544954500D9A54E /* scene_manager.h */,
+				93F63D761544954500D9A54E /* script_interface.i */,
+				93F63D771544954500D9A54E /* stdafx.cpp */,
+				93F63D781544954500D9A54E /* stdafx.h */,
+				93F63D791544954500D9A54E /* tags */,
+			);
+			path = TinyColony;
+			sourceTree = "<group>";
+		};
+		93F63D2F1544954500D9A54E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D301544954500D9A54E /* ActorDef */,
+				93F63D321544954500D9A54E /* defaults.lua */,
+				93F63D331544954500D9A54E /* input_bindings.ini */,
+				93F63D341544954500D9A54E /* Level */,
+				93F63D351544954500D9A54E /* tuning.lua */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		93F63D301544954500D9A54E /* ActorDef */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D311544954500D9A54E /* actor_def.lua */,
+			);
+			path = ActorDef;
+			sourceTree = "<group>";
+		};
+		93F63D341544954500D9A54E /* Level */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Level;
+			sourceTree = "<group>";
+		};
+		93F63D361544954500D9A54E /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D371544954500D9A54E /* Attributions.txt */,
+				93F63D381544954500D9A54E /* GameInfo.txt */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
+		93F63D3D1544954500D9A54E /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logs;
+			sourceTree = "<group>";
+		};
+		93F63D421544954500D9A54E /* platforms */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D431544954500D9A54E /* ios */,
+				93F63D511544954500D9A54E /* linux */,
+				93F63D521544954500D9A54E /* mac */,
+				93F63D551544954500D9A54E /* win */,
+			);
+			path = platforms;
+			sourceTree = "<group>";
+		};
+		93F63D431544954500D9A54E /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D441544954500D9A54E /* ClientGameInfo.plist */,
+				93F63D451544954500D9A54E /* Default-Landscape.png */,
+				93F63D461544954500D9A54E /* Default.png */,
+				93F63D471544954500D9A54E /* Default@2x.png */,
+				93F63D481544954500D9A54E /* Icon-72.png */,
+				93F63D491544954500D9A54E /* Icon-Small-50.png */,
+				93F63D4A1544954500D9A54E /* Icon-Small.png */,
+				93F63D4B1544954500D9A54E /* Icon-Small@2x.png */,
+				93F63D4C1544954500D9A54E /* Icon.png */,
+				93F63D4D1544954500D9A54E /* Icon@2x.png */,
+				93F63D4E1544954500D9A54E /* iPhoneMain.cpp */,
+				93F63D4F1544954500D9A54E /* iPhoneMain.h */,
+				93F63D501544954500D9A54E /* iTunesArtwork */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		93F63D511544954500D9A54E /* linux */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = linux;
+			sourceTree = "<group>";
+		};
+		93F63D521544954500D9A54E /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D531544954500D9A54E /* angel.icns */,
+				93F63D541544954500D9A54E /* ClientGameInfo.plist */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		93F63D551544954500D9A54E /* win */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D561544954500D9A54E /* angel.ico */,
+				93F63D571544954500D9A54E /* angel_small.ico */,
+			);
+			path = win;
+			sourceTree = "<group>";
+		};
+		93F63D5A1544954500D9A54E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D5B1544954500D9A54E /* Fonts */,
+				93F63D5D1544954500D9A54E /* Images */,
+				93F63D631544954500D9A54E /* Scripts */,
+				93F63D6B1544954500D9A54E /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		93F63D5B1544954500D9A54E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D5C1544954500D9A54E /* Inconsolata.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		93F63D5D1544954500D9A54E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D5E1544954500D9A54E /* ant.png */,
+				93F63D5F1544954500D9A54E /* anthill.png */,
+				93F63D601544954500D9A54E /* arrow.png */,
+				93F63D611544954500D9A54E /* dirt.png */,
+				93F63D621544954500D9A54E /* food.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		93F63D631544954500D9A54E /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D641544954500D9A54E /* autocomplete.lua */,
+				93F63D651544954500D9A54E /* client_start.lua */,
+				93F63D661544954500D9A54E /* conf_load.lua */,
+				93F63D671544954500D9A54E /* pref_load.lua */,
+				93F63D681544954500D9A54E /* start.lua */,
+				93F63D691544954500D9A54E /* sugar.lua */,
+				93F63D6A1544954500D9A54E /* util.lua */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		93F63D6B1544954500D9A54E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				93F63D6C1544954500D9A54E /* bite.wav */,
+				93F63D6D1544954500D9A54E /* heal.wav */,
+				93F63D6E1544954500D9A54E /* hurt.wav */,
+				93F63D6F1544954500D9A54E /* levelup.wav */,
+				93F63D701544954500D9A54E /* xp.wav */,
+				93F63D711544954500D9A54E /* xylophone.ogg */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2532,17 +2730,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34974A3B0E2926460018A032 /* stdafx.h in Headers */,
-				930F1DBA1541CF9800E1D127 /* scene_manager.h in Headers */,
-				930F1DBC1541CF9800E1D127 /* scene_main.h in Headers */,
-				930F1DC91542702F00E1D127 /* color.h in Headers */,
-				93962601154291BD00EC6D73 /* ant.h in Headers */,
-				939626051542B1A100EC6D73 /* math_utils.h in Headers */,
-				9396260D1542C3C200EC6D73 /* game.h in Headers */,
-				93221FC01542D289009AB608 /* food.h in Headers */,
-				93E342FD1542D9F90004B350 /* ant_target.h in Headers */,
-				93E343011542DA9D0004B350 /* ant_colony.h in Headers */,
-				9374D7201543B01500DB2EC3 /* player.h in Headers */,
+				93F63D7B1544954500D9A54E /* ant.h in Headers */,
+				93F63D7D1544954500D9A54E /* ant_colony.h in Headers */,
+				93F63D7F1544954500D9A54E /* ant_target.h in Headers */,
+				93F63D811544954500D9A54E /* color.h in Headers */,
+				93F63D831544954500D9A54E /* food.h in Headers */,
+				93F63D851544954500D9A54E /* game.h in Headers */,
+				93F63D891544954500D9A54E /* math_utils.h in Headers */,
+				93F63D8B1544954500D9A54E /* iPhoneMain.h in Headers */,
+				93F63D8D1544954500D9A54E /* player.h in Headers */,
+				93F63D8F1544954500D9A54E /* scene_main.h in Headers */,
+				93F63D911544954500D9A54E /* scene_manager.h in Headers */,
+				93F63D941544954500D9A54E /* stdafx.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2878,9 +3077,9 @@
 			productReference = 34EECBDC11CB922100667B26 /* libLua.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		8D1107260486CEB800E47090 /* ClientGame */ = {
+		8D1107260486CEB800E47090 /* TinyColony */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ClientGame" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TinyColony" */;
 			buildPhases = (
 				34388F3B11E3EF61002A79B1 /* Generate Lua Wrapping */,
 				34974A490E29265E0018A032 /* Headers */,
@@ -2897,10 +3096,10 @@
 				345AAF2611CB38A1002B4471 /* PBXTargetDependency */,
 				34388F4A11E3F048002A79B1 /* PBXTargetDependency */,
 			);
-			name = ClientGame;
+			name = TinyColony;
 			productInstallPath = "$(HOME)/Applications";
 			productName = GameJam;
-			productReference = 8D1107320486CEB800E47090 /* ClientGame.app */;
+			productReference = 8D1107320486CEB800E47090 /* TinyColony.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2926,7 +3125,7 @@
 			projectRoot = "";
 			targets = (
 				34D34E200E2C376A0053994C /* IntroGame */,
-				8D1107260486CEB800E47090 /* ClientGame */,
+				8D1107260486CEB800E47090 /* TinyColony */,
 				345AAD0711CB3710002B4471 /* Angel */,
 				34A18BA60E284044001C79A5 /* Box2D */,
 				343C16CC13194490003637EA /* Vorbis */,
@@ -2969,7 +3168,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Set the FMOD library to be loaded properly\ninstall_name_tool -change ./libfmodex.dylib @executable_path/../Frameworks/libfmodex.dylib \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n# Why on earth does this need to happen here?\nif [ ! -d \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" ]; then\n\tmkdir -p \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\nfi\n\n# Copy over all the images, sounds, fonts, and scripts\n\"${CONFIGURATION_BUILD_DIR}/Lua\" Tools/BuildScripts/mac-specific/CopyResources.lua\n\n# Run the publish step if we're building in Release\nif [ ${CONFIGURATION} == \"Release\" ]; then\n    \"${CONFIGURATION_BUILD_DIR}/Lua\" Tools/BuildScripts/publish_mac.lua -i \"${PROJECT_DIR}/ClientGame\" -o \"${PROJECT_DIR}/Published\" -g ClientGame.app\nfi";
+			shellScript = "# Set the FMOD library to be loaded properly\ninstall_name_tool -change ./libfmodex.dylib @executable_path/../Frameworks/libfmodex.dylib \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n# Why on earth does this need to happen here?\nif [ ! -d \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" ]; then\n\tmkdir -p \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"\nfi\n\n# Copy over all the images, sounds, fonts, and scripts\n\"${CONFIGURATION_BUILD_DIR}/Lua\" Tools/BuildScripts/mac-specific/CopyResources.lua\n\n# Run the publish step if we're building in Release\nif [ ${CONFIGURATION} == \"Release\" ]; then\n    \"${CONFIGURATION_BUILD_DIR}/Lua\" Tools/BuildScripts/publish_mac.lua -i \"${PROJECT_DIR}/ClientGame\" -o \"${PROJECT_DIR}/Published\" -g TinyColony.app\nfi";
 			showEnvVarsInLog = 0;
 		};
 		34388F3B11E3EF61002A79B1 /* Generate Lua Wrapping */ = {
@@ -3370,19 +3569,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9396260C1542C3C200EC6D73 /* game.cpp in Sources */,
-				93221FBF1542D289009AB608 /* food.cpp in Sources */,
-				93962600154291BD00EC6D73 /* ant.cpp in Sources */,
 				34388F2F11E3EF45002A79B1 /* AngelLuaWrapping.cpp in Sources */,
-				34974A330E2925BE0018A032 /* Main.cpp in Sources */,
-				34974A320E2925BE0018A032 /* stdafx.cpp in Sources */,
-				930F1DB91541CF9800E1D127 /* scene_manager.cpp in Sources */,
-				930F1DBB1541CF9800E1D127 /* scene_main.cpp in Sources */,
-				939626041542B1A100EC6D73 /* math_utils.cpp in Sources */,
-				930F1DC81542702F00E1D127 /* color.cpp in Sources */,
-				93E342FC1542D9F90004B350 /* ant_target.cpp in Sources */,
-				93E343001542DA9D0004B350 /* ant_colony.cpp in Sources */,
-				9374D71F1543B01500DB2EC3 /* player.cpp in Sources */,
+				93F63D7A1544954500D9A54E /* ant.cpp in Sources */,
+				93F63D7C1544954500D9A54E /* ant_colony.cpp in Sources */,
+				93F63D7E1544954500D9A54E /* ant_target.cpp in Sources */,
+				93F63D801544954500D9A54E /* color.cpp in Sources */,
+				93F63D821544954500D9A54E /* food.cpp in Sources */,
+				93F63D841544954500D9A54E /* game.cpp in Sources */,
+				93F63D861544954500D9A54E /* Main.cpp in Sources */,
+				93F63D881544954500D9A54E /* math_utils.cpp in Sources */,
+				93F63D8A1544954500D9A54E /* iPhoneMain.cpp in Sources */,
+				93F63D8C1544954500D9A54E /* player.cpp in Sources */,
+				93F63D8E1544954500D9A54E /* scene_main.cpp in Sources */,
+				93F63D901544954500D9A54E /* scene_manager.cpp in Sources */,
+				93F63D931544954500D9A54E /* stdafx.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3937,7 +4137,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/ClientGame/stdafx.h";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/TinyColony/stdafx.h";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"\"$(PROJECT_DIR)/Angel/Libraries/Box2D-2.2.1\"",
@@ -3946,13 +4146,13 @@
 					"\"$(PROJECT_DIR)/Angel/Libraries/libogg-1.3.0/include\"",
 					"\"$(PROJECT_DIR)/Angel/Libraries/libvorbis-1.3.2/include\"",
 				);
-				INFOPLIST_FILE = ClientGame/platforms/mac/ClientGameInfo.plist;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/TinyColony/platforms/mac/TinyColonyInfo.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(PROJECT_DIR)/Angel/Libraries/FMOD\"",
 					"\"$(SRCROOT)/Angel/Libraries/DevIL-SDK-1.7.8/mac/lib\"",
 				);
-				PRODUCT_NAME = ClientGame;
+				PRODUCT_NAME = TinyColony;
 			};
 			name = Debug;
 		};
@@ -3964,7 +4164,7 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/ClientGame/stdafx.h";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/TinyColony/stdafx.h";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
 					"\"$(PROJECT_DIR)/Angel/Libraries/Box2D-2.2.1\"",
@@ -3973,13 +4173,13 @@
 					"\"$(PROJECT_DIR)/Angel/Libraries/libogg-1.3.0/include\"",
 					"\"$(PROJECT_DIR)/Angel/Libraries/libvorbis-1.3.2/include\"",
 				);
-				INFOPLIST_FILE = ClientGame/platforms/mac/ClientGameInfo.plist;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/TinyColony/platforms/mac/TinyColonyInfo.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(PROJECT_DIR)/Angel/Libraries/FMOD\"",
 					"\"$(SRCROOT)/Angel/Libraries/DevIL-SDK-1.7.8/mac/lib\"",
 				);
-				PRODUCT_NAME = ClientGame;
+				PRODUCT_NAME = TinyColony;
 			};
 			name = Release;
 		};
@@ -4124,7 +4324,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ClientGame" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TinyColony" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,

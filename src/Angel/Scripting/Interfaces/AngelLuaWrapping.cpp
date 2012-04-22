@@ -4760,7 +4760,7 @@ static int _wrap_Message_GetSender(lua_State* L) {
   result = (MessageListener *)(arg1)->GetSender();
   {
     int dcast = 0;
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,200,%formacro@*//*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,200,%formacro@*//*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       TextActor *dobj = dynamic_cast<TextActor *>(result);
       if (dobj) {
@@ -4769,7 +4769,7 @@ static int _wrap_Message_GetSender(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       PhysicsActor *dobj = dynamic_cast<PhysicsActor *>(result);
       if (dobj) {
@@ -4778,7 +4778,7 @@ static int _wrap_Message_GetSender(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       Camera *dobj = dynamic_cast<Camera *>(result);
       if (dobj) {
@@ -4787,7 +4787,7 @@ static int _wrap_Message_GetSender(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       ParticleActor *dobj = dynamic_cast<ParticleActor *>(result);
       if (dobj) {
@@ -4796,7 +4796,7 @@ static int _wrap_Message_GetSender(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       Actor *dobj = dynamic_cast<Actor *>(result);
       if (dobj) {
@@ -10719,7 +10719,7 @@ static int _wrap_new_Actor(lua_State* L) {
   result = (Actor *)new Actor();
   {
     int dcast = 0;
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,200,%formacro@*//*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,200,%formacro@*//*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       TextActor *dobj = dynamic_cast<TextActor *>(result);
       if (dobj) {
@@ -10728,7 +10728,7 @@ static int _wrap_new_Actor(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       Camera *dobj = dynamic_cast<Camera *>(result);
       if (dobj) {
@@ -10737,7 +10737,7 @@ static int _wrap_new_Actor(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       PhysicsActor *dobj = dynamic_cast<PhysicsActor *>(result);
       if (dobj) {
@@ -10746,7 +10746,7 @@ static int _wrap_new_Actor(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       ParticleActor *dobj = dynamic_cast<ParticleActor *>(result);
       if (dobj) {
@@ -14371,7 +14371,7 @@ static int _wrap_Actor_GetNamed(lua_State* L) {
   result = (Actor *)Actor::GetNamed(arg1);
   {
     int dcast = 0;
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,200,%formacro@*//*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,200,%formacro@*//*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       TextActor *dobj = dynamic_cast<TextActor *>(result);
       if (dobj) {
@@ -14380,7 +14380,7 @@ static int _wrap_Actor_GetNamed(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       Camera *dobj = dynamic_cast<Camera *>(result);
       if (dobj) {
@@ -14389,7 +14389,7 @@ static int _wrap_Actor_GetNamed(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       PhysicsActor *dobj = dynamic_cast<PhysicsActor *>(result);
       if (dobj) {
@@ -14398,7 +14398,7 @@ static int _wrap_Actor_GetNamed(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       ParticleActor *dobj = dynamic_cast<ParticleActor *>(result);
       if (dobj) {
@@ -14607,7 +14607,7 @@ static int _wrap_Actor_GetSelf(lua_State* L) {
   result = (Actor *)(arg1)->GetSelf();
   {
     int dcast = 0;
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,200,%formacro@*//*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,200,%formacro@*//*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       TextActor *dobj = dynamic_cast<TextActor *>(result);
       if (dobj) {
@@ -14616,7 +14616,7 @@ static int _wrap_Actor_GetSelf(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       Camera *dobj = dynamic_cast<Camera *>(result);
       if (dobj) {
@@ -14625,7 +14625,7 @@ static int _wrap_Actor_GetSelf(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       PhysicsActor *dobj = dynamic_cast<PhysicsActor *>(result);
       if (dobj) {
@@ -14634,7 +14634,7 @@ static int _wrap_Actor_GetSelf(lua_State* L) {
       }   
     }/*@SWIG@*/
     
-    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23-warmup/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
+    /*@SWIG:/opt/local/share/swig/2.0.4/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/Users/aaron/Projects/ludumdare-23/src/Angel/Scripting/Interfaces/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
       ParticleActor *dobj = dynamic_cast<ParticleActor *>(result);
       if (dobj) {

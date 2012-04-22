@@ -12,8 +12,6 @@ int main(int argc, char* argv[]) {
 	//		bool antiAliasing		default: false
 	//		bool fullScreen			default: false
 	theWorld.Initialize(1024, 768, "TinyColony", true, false);
-	
-    theWorld.Add(new GridActor(), 1);
     
     // Set the game manager to handle sounds and scenes etc
     theWorld.SetGameManager(&theSceneManager);
