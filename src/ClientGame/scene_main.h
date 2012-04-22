@@ -22,10 +22,10 @@ public:
 
 	virtual void Start();
 	virtual void Update(float dt);
+    virtual void Render();
 
 private:
     Game *game;
-    Actor *player;
     
 	virtual void ReceiveMessage(Message *message);
     virtual void MouseMotionEvent(Vec2i screen_coords);

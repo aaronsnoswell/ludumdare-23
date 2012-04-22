@@ -534,6 +534,8 @@
 		930F1DC91542702F00E1D127 /* color.h in Headers */ = {isa = PBXBuildFile; fileRef = 930F1DC71542702F00E1D127 /* color.h */; };
 		93221FBF1542D289009AB608 /* food.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93221FBD1542D289009AB608 /* food.cpp */; };
 		93221FC01542D289009AB608 /* food.h in Headers */ = {isa = PBXBuildFile; fileRef = 93221FBE1542D289009AB608 /* food.h */; };
+		9374D71F1543B01500DB2EC3 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9374D71D1543B01500DB2EC3 /* player.cpp */; };
+		9374D7201543B01500DB2EC3 /* player.h in Headers */ = {isa = PBXBuildFile; fileRef = 9374D71E1543B01500DB2EC3 /* player.h */; };
 		93962600154291BD00EC6D73 /* ant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 939625FE154291BD00EC6D73 /* ant.cpp */; };
 		93962601154291BD00EC6D73 /* ant.h in Headers */ = {isa = PBXBuildFile; fileRef = 939625FF154291BD00EC6D73 /* ant.h */; };
 		939626041542B1A100EC6D73 /* math_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 939626021542B1A100EC6D73 /* math_utils.cpp */; };
@@ -1254,6 +1256,8 @@
 		930F1DC71542702F00E1D127 /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = color.h; path = ClientGame/color.h; sourceTree = "<group>"; };
 		93221FBD1542D289009AB608 /* food.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = food.cpp; path = ClientGame/food.cpp; sourceTree = "<group>"; };
 		93221FBE1542D289009AB608 /* food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = food.h; path = ClientGame/food.h; sourceTree = "<group>"; };
+		9374D71D1543B01500DB2EC3 /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = player.cpp; path = ClientGame/player.cpp; sourceTree = "<group>"; };
+		9374D71E1543B01500DB2EC3 /* player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = player.h; path = ClientGame/player.h; sourceTree = "<group>"; };
 		939625FE154291BD00EC6D73 /* ant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ant.cpp; path = ClientGame/ant.cpp; sourceTree = "<group>"; };
 		939625FF154291BD00EC6D73 /* ant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ant.h; path = ClientGame/ant.h; sourceTree = "<group>"; };
 		939626021542B1A100EC6D73 /* math_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = math_utils.cpp; path = ClientGame/math_utils.cpp; sourceTree = "<group>"; };
@@ -1851,6 +1855,8 @@
 		34974A2B0E29259A0018A032 /* ClientGame */ = {
 			isa = PBXGroup;
 			children = (
+				9374D71D1543B01500DB2EC3 /* player.cpp */,
+				9374D71E1543B01500DB2EC3 /* player.h */,
 				93E342FE1542DA9D0004B350 /* ant_colony.cpp */,
 				93E342FF1542DA9D0004B350 /* ant_colony.h */,
 				93E342FA1542D9F90004B350 /* ant_target.cpp */,
@@ -2536,6 +2542,7 @@
 				93221FC01542D289009AB608 /* food.h in Headers */,
 				93E342FD1542D9F90004B350 /* ant_target.h in Headers */,
 				93E343011542DA9D0004B350 /* ant_colony.h in Headers */,
+				9374D7201543B01500DB2EC3 /* player.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3375,6 +3382,7 @@
 				930F1DC81542702F00E1D127 /* color.cpp in Sources */,
 				93E342FC1542D9F90004B350 /* ant_target.cpp in Sources */,
 				93E343001542DA9D0004B350 /* ant_colony.cpp in Sources */,
+				9374D71F1543B01500DB2EC3 /* player.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

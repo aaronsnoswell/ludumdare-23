@@ -2,6 +2,9 @@
 
 #include "scene_main.h"
 
+#include "ant_colony.h"
+
+#include <sstream>
 
 SceneMain::SceneMain() {
     // Randomly generate the world
@@ -9,20 +12,29 @@ SceneMain::SceneMain() {
     
     // Load the background music
     AngelSampleHandle music = theSound.LoadSample("Resources/Sounds/xylophone.ogg", false);
-    theSound.PlaySound(music); 
+    theSound.PlaySound(music);
     
     _mouse_wheel_pos = 0;
 }
 
 void SceneMain::Start() {
-    // Register a mouse-wheel callback
-    //glfwSetMouseWheelCallback(MouseWheelEvent);
-    
     theGame.Start(_objects);
+    
 }
 
 void SceneMain::Update(float dt) {
     theGame.Update(dt);
+}
+
+void SceneMain::Render() {
+    glColor3f(1.0f, 1.0f, 1.0f);
+    
+    std::stringstream tmp;
+    tmp << "Blue Food: " << theGame.blue_colony->food_store << " Pop: " << theGame.blue_colony->ants.size();
+    DrawGameText(tmp.str(), "Console", 5, 24, 0);
+    tmp.str("");
+    tmp << "Red Food: " << theGame.red_colony->food_store << " Pop: " << theGame.red_colony->ants.size();
+    DrawGameText(tmp.str(), "Console", 5, 24 + 24, 0);
 }
 
 void SceneMain::ReceiveMessage(Message *message) {
@@ -76,17 +88,6 @@ void SceneMain::MouseWheelEvent(int position) {
         std::max(1.0f, std::min(40.0f, theCamera.GetZ() + delta * 0.5f))
     );
 }
-
-/*
-// Shhh. A global. Don't tell anyone
-int _mouse_wheel_pos = 0;
-void MouseWheelEvent(<#int pos#>) {
-    int offset = _mouse_wheel_pos - pos;
-    _mouse_wheel_pos = pos;
-    
-    theCamera.SetPosition(theCamera.GetPosition().X, theCamera.GetPosition().Y, theCamera.GetZ() + offset);
-}
-*/
 
 
 

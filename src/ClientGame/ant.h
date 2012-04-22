@@ -29,6 +29,10 @@
 
 // How far ants can see
 #define SIGHT_RANGE         10
+#define BITE_RANGE          1.5f
+#define BITE_HURT           5
+
+#define ANT_HEAD_LENGTH     0.75f
 
 // Forward-define AntColony
 class AntColony;
@@ -36,17 +40,23 @@ class AntColony;
 /**
  * An ant, AI controlled
  */
-class Ant : public AntTarget, public MessageListener {
+class Ant : public AntTarget {
 public:
     Ant(AntColony *team, float x, float y);
     
-    void update(float dt);
+    void Update(float dt);
     void addXP(int points);
     void levelUp();
     
 	virtual void ReceiveMessage(Message *message);
+    virtual void bitten();
     
-private:
+    friend class Player;
+    
+    bool dead;
+    void die();
+    
+protected:
     AntColony *team;
     float health;
     float stamina;
@@ -54,17 +64,25 @@ private:
     int points;
     int state;
     AntTarget *target;
+    Food *carrying;
     
     float ANT_SPEED;
+    float ANT_HEALTH;
     
-    Vector2 *velocity;
+    Vector2 velocity;
     
     // The different movement states
+    bool _seeking_food;
     void seekFood();
     void returnFood();
     void attackTarget();
     void helpAnt();
     void followTrail();
+    
+    void dropFood();
+    
+    Vector2 GetHeadPosition();
+    
 };
 
 
