@@ -1,8 +1,8 @@
 
+#include "stdafx.h"
+
 #ifndef ANTGAME_SCENE_MAIN
 #define ANTGAME_SCENE_MAIN
-
-#include "stdafx.h"
 
 #include <vector>
 #include <cstdlib>

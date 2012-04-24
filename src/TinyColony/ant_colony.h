@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #ifndef ANTGAME_ANT_COLONY_H
 #define ANTGAME_ANT_COLONY_H
 

@@ -1,8 +1,8 @@
 
+#include "stdafx.h"
+
 #ifndef ANTGAME_MATH_UTILS_H
 #define ANTGAME_MATH_UTILS_H
-
-#include "stdafx.h"
 
 float gauss_rand(float mean, float range);
 float capped_gauss_rand(float min, float max, unsigned rolls=10, double stretch=2);

@@ -1,4 +1,5 @@
 
+#include "stdafx.h"
 
 #ifndef ANTGAME_ANT_H
 #define ANTGAME_ANT_H

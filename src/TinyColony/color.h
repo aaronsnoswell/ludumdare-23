@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #ifndef ANTGAME_COLOR_H
 #define ANTGAME_COLOR_H
 

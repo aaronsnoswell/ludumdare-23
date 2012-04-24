@@ -1,8 +1,8 @@
 
+#include "stdafx.h"
+
 #ifndef ANTGAME_SCENE_MANAGER_H
 #define ANTGAME_SCENE_MANAGER_H
-
-#include "stdafx.h"
 
 #include <vector>
 #include <string>

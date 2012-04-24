@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #include "math_utils.h"
 
 #include <cstdlib>

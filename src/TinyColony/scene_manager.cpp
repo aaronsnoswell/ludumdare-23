@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #include "scene_main.h"
 
 #include "scene_manager.h"

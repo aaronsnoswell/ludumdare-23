@@ -1,4 +1,5 @@
 
+#include "stdafx.h"
 
 #ifndef ANTGAME_FOOD_H
 #define ANTGAME_FOOD_H

@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #include "ant_target.h"
 
 AntTarget::AntTarget() {

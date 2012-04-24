@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #include "food.h"
 
 Food::Food(float x, float y) {

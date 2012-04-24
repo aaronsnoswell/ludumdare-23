@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #ifndef ANTGAME_PLAYER_H
 #define ANTGAME_PLAYER_H
 

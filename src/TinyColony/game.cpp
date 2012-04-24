@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #include "game.h"
 
 #include "ant_colony.h"
@@ -115,7 +117,7 @@ void Game::Update(float dt) {
             consumed_food.push_back(*i);
         }
     }
-    for(int i=0; i<consumed_food.size(); i++) {
+    for(unsigned int i=0; i<consumed_food.size(); i++) {
         consumed_food[i]->Remove();
     }
     
@@ -127,8 +129,8 @@ void Game::Update(float dt) {
     
     // Update the radar arrow
     Vector2 delta = Vector2::Vector2(player->GetPosition() - blue_colony->GetPosition());
-    float scale = 45/atan(1);
-    float angle = (scale*atan2(delta.Y, delta.X))+90;
+    float scale = 45/atan(1.0f);
+    float angle = (scale * atan2((float) delta.Y, (float) delta.X))+90;
     home_arrow->SetRotation(angle);
 }
 

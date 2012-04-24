@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="ClientGame"
+	Name="TinyColony"
 	ProjectGUID="{5B267A7F-D9DF-4B2E-B3E7-73A4EF0F1A36}"
 	RootNamespace="ClientGame"
 	Keyword="Win32Proj"
@@ -286,6 +286,30 @@
 			</File>
 		</Filter>
 		<File
+			RelativePath=".\ant.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\ant.h"
+			>
+		</File>
+		<File
+			RelativePath=".\ant_colony.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\ant_colony.h"
+			>
+		</File>
+		<File
+			RelativePath=".\ant_target.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\ant_target.h"
+			>
+		</File>
+		<File
 			RelativePath=".\build.lua"
 			>
 		</File>
@@ -294,7 +318,63 @@
 			>
 		</File>
 		<File
+			RelativePath=".\color.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\color.h"
+			>
+		</File>
+		<File
+			RelativePath=".\food.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\food.h"
+			>
+		</File>
+		<File
+			RelativePath=".\game.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\game.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Main.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\math_utils.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\math_utils.h"
+			>
+		</File>
+		<File
+			RelativePath=".\player.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\player.h"
+			>
+		</File>
+		<File
+			RelativePath=".\scene_main.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\scene_main.h"
+			>
+		</File>
+		<File
+			RelativePath=".\scene_manager.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\scene_manager.h"
 			>
 		</File>
 		<File

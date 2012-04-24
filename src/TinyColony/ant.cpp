@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #include "ant.h"
 
 #include <sstream>
@@ -137,7 +139,7 @@ void Ant::Update(float dt) {
     this->SetPosition(this->GetPosition() + this->velocity * dt);
     
     // Set angle
-    float scale = 45/atan(1);
+    float scale = 45/atan(1.0f);
     float angle = (scale*atan2(this->velocity.Y, this->velocity.X))-90;
     this->SetRotation(angle);
     
@@ -200,10 +202,10 @@ void Ant::seekFood() {
         if(this->velocity != NULL) {
             // Move roughly in the same dirction as we previously were
             this->velocity.Normalize();
-            this->velocity = Vector2::Rotate(this->velocity, rand_range(-0.25f * M_PI, 0.25f * M_PI));
+            this->velocity = Vector2::Rotate(this->velocity, rand_range(-0.25f * 3.14f, 0.25f * 3.14f));
         } else {
             // Otherwise just choose a random direction
-            this->velocity = Vector2::Rotate(Vector2::Vector2(1.0f, 0.0f), rand_range(0, 2*M_PI));
+            this->velocity = Vector2::Rotate(Vector2::Vector2(1.0f, 0.0f), rand_range(0, 2*3.14f));
         }
         this->velocity *= ANT_SPEED;
         
@@ -398,7 +400,7 @@ void Ant::bitten() {
 }
 
 Vector2 Ant::GetHeadPosition() {
-    return this->GetPosition() + Vector2::Rotate(Vector2::Vector2(ANT_HEAD_LENGTH, 0), (this->GetRotation() + 90) * M_PI / 180);
+    return this->GetPosition() + Vector2::Rotate(Vector2::Vector2(ANT_HEAD_LENGTH, 0), (this->GetRotation() + 90) * 3.14f / 180);
 }
 
 void Ant::die() {

@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #include "player.h"
 
 #include "ant_colony.h"
@@ -67,7 +69,7 @@ void Player::Update(float dt) {
     
     // Set angle
     if(x != 0 || y != 0) {
-        float scale = 45/atan(1);
+        float scale = 45/atan(1.0f);
         float angle = (scale*atan2(this->velocity.Y, this->velocity.X))-90;
         this->SetRotation(angle);
     }
@@ -123,7 +125,8 @@ void Player::ReceiveMessage(Message *m) {
         }
         
         // Grab onto any nearby food bit
-        float shortest_dist;
+		// XXX ajs VC++'s picky compiler settings complain about shortest_dist not being defined...
+        float shortest_dist = 999999.0f;
         Food *closest = NULL;
         for(std::vector<Food *>::iterator i=theGame.foodbits.begin(); i!=theGame.foodbits.end(); i++) {
             if(!(*i)->being_carried) {

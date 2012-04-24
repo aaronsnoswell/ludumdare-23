@@ -1,4 +1,6 @@
 
+#include "stdafx.h"
+
 #include "ant_colony.h"
 
 #include "food.h"
@@ -55,7 +57,7 @@ void AntColony::Update(float dt) {
     }
     
     // Remove any dead ants
-    for(int i=0; i<to_remove.size(); i++) {
+    for(unsigned int i=0; i<to_remove.size(); i++) {
         to_remove[i]->die();
     }
     

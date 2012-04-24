@@ -1,4 +1,5 @@
 
+#include "stdafx.h"
 
 #include "scene_main.h"
 
@@ -6,6 +7,7 @@
 #include "player.h"
 
 #include <sstream>
+#include <ctime>
 
 SceneMain::SceneMain() {
     // Random seeds, please
@@ -33,10 +35,10 @@ void SceneMain::Render() {
     
     std::stringstream tmp;
     tmp << "Blue Food: " << theGame.blue_colony->food_store << " Pop: " << theGame.blue_colony->ants.size();
-    DrawGameText(tmp.str(), "Console", 5, 24, 0);
+    DrawGameText(tmp.str(), "Console", 5, 24 + 5, 0);
     tmp.str("");
     tmp << "Red Food: " << theGame.red_colony->food_store << " Pop: " << theGame.red_colony->ants.size();
-    DrawGameText(tmp.str(), "Console", 5, 24 + 24, 0);
+    DrawGameText(tmp.str(), "Console", 5, 24 + 24 + 5, 0);
     
     tmp.str("");
     tmp << "LVL: " << theGame.player->level;

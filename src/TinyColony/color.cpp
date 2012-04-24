@@ -1,5 +1,5 @@
 
-
+#include "stdafx.h"
 
 #include "color.h"
 
@@ -25,7 +25,7 @@ float MyColor::smallRand(float ammount) {
     sum = (sqrt(0.5f) * sum + 1.0f) * ammount;
     
     // Cap the value
-    sum = fmin(1.0f, fmax(sum, -1.0f));
+    sum = min(1.0f, max(sum, -1.0f));
     
     // Either return +ve or -ve
     if((1.0f * rand() / RAND_MAX) > 0.5f) sum *= -1;
